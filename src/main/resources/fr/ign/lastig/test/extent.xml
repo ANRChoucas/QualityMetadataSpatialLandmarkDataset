@@ -1,0 +1,45 @@
+<gex:EX_Extent
+    xmlns:gex = "http://standards.iso.org/iso/19115/-3/gex/1.0"
+    xmlns:gco = "http://standards.iso.org/iso/19115/-3/gco/1.0"
+    xmlns:gml = "http://www.opengis.net/gml/3.2"
+    xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:mcc = "http://standards.iso.org/iso/19115/-3/mcc/1.0"
+    xsi:schemaLocation = "http://standards.iso.org/iso/19115/-3/gex/1.0
+                          http://standards.iso.org/iso/19115/-3/gex/1.0/gex.xsd">
+
+    <gex:geographicElement>
+        <!--
+        <gex:EX_GeographicBoundingBox id="bbox">
+            <gex:extentTypeCode>
+                <gco:Boolean>true</gco:Boolean>
+            </gex:extentTypeCode>
+            <gex:westBoundLongitude>
+                <gco:Decimal>-99.0</gco:Decimal>
+            </gex:westBoundLongitude>
+            <gex:eastBoundLongitude>
+                <gco:Decimal>-79.0</gco:Decimal>
+            </gex:eastBoundLongitude>
+            <gex:southBoundLatitude>
+                <gco:Decimal>14.9844</gco:Decimal>
+            </gex:southBoundLatitude>
+            <gex:northBoundLatitude>
+                <gco:Decimal>31.0</gco:Decimal>
+            </gex:northBoundLatitude>
+        </gex:EX_GeographicBoundingBox>
+        -->
+    
+        <gex:EX_GeographicDescription>
+            <gex:geographicIdentifier>
+                <mcc:MD_Identifier>
+                  <mcc:code>
+                    <gco:CharacterString>France</gco:CharacterString>
+                  </mcc:code>
+                </mcc:MD_Identifier>
+            </gex:geographicIdentifier>
+        </gex:EX_GeographicDescription>
+    
+    
+    </gex:geographicElement>
+
+</gex:EX_Extent>
+
