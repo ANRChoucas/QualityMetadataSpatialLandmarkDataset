@@ -5,6 +5,7 @@ Metadata describing and assessing the quality of spatial landmark datasets in mo
 ## Scripts SQL
 
 - To build database
+- To compute confidence: sql/confidence.sql
 - To compute spatial accuracy
 - To compute confusion matrix:
 - To compute commission and omission: 
