@@ -8,7 +8,7 @@ import org.apache.sis.metadata.iso.extent.DefaultGeographicBoundingBox;
 import org.apache.sis.metadata.iso.extent.DefaultTemporalExtent;
 import org.apache.sis.metadata.iso.lineage.DefaultLineage;
 import org.apache.sis.metadata.iso.lineage.DefaultSource;
-
+import org.apache.sis.util.iso.SimpleInternationalString;
 
 import static java.util.Collections.singleton;
 
