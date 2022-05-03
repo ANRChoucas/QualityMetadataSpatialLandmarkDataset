@@ -2,13 +2,13 @@
 Metadata describing and assessing the quality of spatial landmark datasets in mountain area
 
 
-## Instanciation
+## 1. Instanciation
  Préparation des données avant l'appariement
 
-## Data Matching
+## 2. Data Matching
 
 
-## Scripts SQL
+## 3. Scripts SQL
 
 - To build database
 - To compute confidence: sql/confidence.sql
@@ -16,6 +16,6 @@ Metadata describing and assessing the quality of spatial landmark datasets in mo
 - To compute confusion matrix:
 - To compute commission and omission: 
 
-## To launch the creation of XML metadata files:
+## 4. To launch the creation of XML metadata files:
 
 The main is into MainMetadataChoucas.java. You have to specify the source.
