@@ -69,6 +69,7 @@ public class Metadata {
 			// Quality
 			metadata.setDataQualityInfo(singleton(DataQuality.getDataQuality(nomtable)));
 			
+			
 			// metadata.setLanguages(Locale.ENGLISH);
 			// metadata.setCharacterSet(CharacterSet.UTF_8);
 		    // List scopeCodes = new ArrayList<ScopeCode>();

@@ -12,6 +12,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven-compiler-plugin.version>3.8.0</maven-compiler-plugin.version>
+		<geoxygene.noyau.version>1.9-SNAPSHOT</geoxygene.noyau.version>
 	</properties>
 
 
@@ -43,31 +44,46 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>org.apache.sis.core</groupId>
-			<artifactId>sis-metadata</artifactId>
-			<version>1.1</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.sis.core</groupId>
-			<artifactId>sis-referencing</artifactId>
-			<version>1.1</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.sis.core</groupId>
-			<artifactId>sis-utility</artifactId>
-			<version>1.1</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.sis.non-free</groupId>
-			<artifactId>sis-embedded-data</artifactId>
-			<version>1.0</version>
-			<scope>runtime</scope>
-		</dependency>
-		<dependency>
-			<groupId>jakarta.xml.bind</groupId>
-			<artifactId>jakarta.xml.bind-api</artifactId>
-			<version>3.0.0</version>
-		</dependency>
+            <groupId>org.apache.sis.core</groupId>
+            <artifactId>sis-metadata</artifactId>
+            <version>1.1-M1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.sis.core</groupId>
+            <artifactId>sis-referencing</artifactId>
+            <version>1.1-M1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.sis.core</groupId>
+            <artifactId>sis-utility</artifactId>
+            <version>1.1-M1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.sis.profiles</groupId>
+            <artifactId>sis-french-profile</artifactId>
+            <version>1.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.sis.storage</groupId>
+            <artifactId>sis-storage</artifactId>
+            <version>1.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.sis.core</groupId>
+            <artifactId>sis-feature</artifactId>
+            <version>1.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.sis.non-free</groupId>
+            <artifactId>sis-embedded-data</artifactId>
+            <version>1.0</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>jakarta.xml.bind</groupId>
+            <artifactId>jakarta.xml.bind-api</artifactId>
+            <version>3.0.0</version>
+        </dependency>
 		
 		
 		<!-- 
@@ -78,6 +94,83 @@
             <scope>runtime</scope>
         </dependency>
 		 -->
+		 
+		 <!-- GEOXYGENE -->
+        <dependency>
+            <groupId>fr.ign.cogit</groupId>
+            <artifactId>geoxygene-api</artifactId>
+            <version>${geoxygene.noyau.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>fr.ign.cogit</groupId>
+            <artifactId>geoxygene-spatial</artifactId>
+            <version>${geoxygene.noyau.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>fr.ign.cogit</groupId>
+            <artifactId>geoxygene-feature</artifactId>
+            <version>${geoxygene.noyau.version}</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>fr.ign.cogit</groupId>
+            <artifactId>geoxygene-io</artifactId>
+            <version>${geoxygene.noyau.version}</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>fr.ign.cogit</groupId>
+            <artifactId>geoxygene-contrib</artifactId>
+            <version>${geoxygene.noyau.version}</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.geotools</groupId>
+            <artifactId>gt-referencing</artifactId>
+            <version>8.4</version>
+        </dependency>
+        <dependency>
+            <groupId>org.geotools</groupId>
+            <artifactId>gt-opengis</artifactId>
+            <version>8.4</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>fr.ign.cogit</groupId>
+            <artifactId>MultiCriteriaMatching</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpmime</artifactId>
+            <version>4.5.6</version>
+        </dependency>
+        
+        <!--  parse output APO -->
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.2.4</version>
+        </dependency>
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20180130</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>com.googlecode.json-simple</groupId>
+            <artifactId>json-simple</artifactId>
+            <version>1.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.10</version>
+            <scope>test</scope>
+        </dependency>
 		
 	</dependencies>
 

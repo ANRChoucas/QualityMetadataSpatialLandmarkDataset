@@ -9,9 +9,6 @@ import org.apache.sis.metadata.iso.extent.DefaultTemporalExtent;
 import org.apache.sis.metadata.iso.lineage.DefaultLineage;
 import org.apache.sis.metadata.iso.lineage.DefaultSource;
 
-import org.apache.sis.util.SimpleInternationalString;
-
-import fr.ign.lastig.choucas.source.C2C;
 
 import static java.util.Collections.singleton;
 
@@ -52,7 +49,12 @@ public class Head {
 		if (datasetsource.contentEquals("app_refinfos_ign")) {
 			
 		} else if (datasetsource.contentEquals("app_c2c_ign")) {
-			source.setDescription(new SimpleInternationalString(C2C.LINEAGE));
+			source.setDescription(new SimpleInternationalString("Camptocamp (C2C) est un projet collaboratif auquel\" \n" + 
+					"			+ \" participe des pratiquants plutôt avertis des sports de montagne.\\n\" \n" + 
+					"			+ \" La saisie des objets de repère se fait via une application web\" \n" + 
+					"			+ \" par les contributeurs avec leurs propres outils de gestion de données\\n\" \n" + 
+					"			+ \" et leur propre fond cartographique. L’altitude est saisie\" \n" + 
+					"			+ \" par les utilisateurs."));
 		}
         
         lineage.getSources().add(source);

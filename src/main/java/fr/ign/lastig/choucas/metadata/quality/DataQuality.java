@@ -9,13 +9,15 @@ import org.apache.sis.metadata.iso.DefaultIdentifier;
 import org.apache.sis.metadata.iso.lineage.DefaultLineage;
 import org.apache.sis.metadata.iso.lineage.DefaultSource;
 import org.apache.sis.metadata.iso.quality.DefaultDataQuality;
-import org.apache.sis.util.SimpleInternationalString;
+//import org.apache.sis.util.SimpleInternationalString;
 import org.opengis.metadata.identification.CharacterSet;
 import org.opengis.metadata.maintenance.ScopeCode;
 import org.opengis.metadata.quality.Element;
+import org.opengis.metadata.quality.Scope;
 
 import fr.ign.lastig.choucas.metadata.IdentificationInfo.Head;
-import fr.ign.lastig.choucas.source.C2C;
+import fr.ign.lastig.choucas.metadata.scope.QualityScope;
+
 
 
 public class DataQuality {
@@ -30,10 +32,10 @@ public class DataQuality {
 		// confidence
 		
 		
-		// quality.setScope(Head.getScope());
+		quality.setScope(QualityScope.getScopeAllZE());
 		// quality.setLineage(Head.getLineage(nomtable));
 		
-		
+/*		
 		Collection<Element> elements = new ArrayList<Element>();
 		
 		// ----------------------------------------------------------------
@@ -72,7 +74,7 @@ public class DataQuality {
 		
 		// ----------------------------------------------------------------
 		quality.setReports(elements);
-		
+*/		
 		
 		
 		

@@ -10,9 +10,10 @@ import org.apache.sis.metadata.iso.DefaultIdentifier;
 import org.apache.sis.metadata.iso.quality.AbstractElement;
 import org.apache.sis.metadata.iso.quality.DefaultAbsoluteExternalPositionalAccuracy;
 import org.apache.sis.metadata.iso.quality.DefaultQuantitativeResult;
-import org.apache.sis.util.SimpleInternationalString;
+//import org.apache.sis.util.SimpleInternationalString;
 import org.apache.sis.util.iso.DefaultRecord;
 import org.apache.sis.util.iso.DefaultRecordType;
+import org.apache.sis.util.iso.SimpleInternationalString;
 import org.opengis.metadata.Identifier;
 
 import static java.util.Collections.singleton;

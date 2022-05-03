@@ -21,7 +21,6 @@ import org.apache.sis.metadata.iso.extent.DefaultGeographicDescription;
 import org.apache.sis.metadata.iso.identification.DefaultDataIdentification;
 import org.apache.sis.metadata.iso.identification.DefaultRepresentativeFraction;
 import org.apache.sis.metadata.iso.identification.DefaultResolution;
-import org.apache.sis.util.SimpleInternationalString;
 import org.opengis.metadata.citation.DateType;
 import org.opengis.metadata.constraint.Classification;
 import org.opengis.metadata.constraint.Restriction;
