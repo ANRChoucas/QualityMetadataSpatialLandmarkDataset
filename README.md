@@ -88,7 +88,7 @@ These instructions will be executed before the first or the second reproducing t
 
 #### Duplicate row 
 
-- Run **duplicate-all.sql** by changing each time the name of the dataset table
+- Run the script SQL **4_duplicate_all** by changing each time the name of the dataset table
 
 
 
