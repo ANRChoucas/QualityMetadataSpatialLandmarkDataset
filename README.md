@@ -86,6 +86,10 @@ These instructions will be executed before the first or the second reproducing t
 - The overall accuracy is the sum of items on the main diagonal + items correctly classified) 
   divided by the sum of all items from the matrix
 
+#### Duplicate row 
+
+- Run **duplicate-all.sql** by changing each time the name of the dataset table
+
 
 
 <br/>
