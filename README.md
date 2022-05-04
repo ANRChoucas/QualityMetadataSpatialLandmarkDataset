@@ -98,6 +98,13 @@ These instructions will be executed before the first or the second reproducing t
 
 - Run the script SQL **sql/6_missing_class.sql** 
 
+
+#### Excess and Missing items rows
+
+- TODO (décrire un remplissage d'un un fichier excel)
+
+
+
 <br/>
 
 <!-- ===================================================================================================== -->
