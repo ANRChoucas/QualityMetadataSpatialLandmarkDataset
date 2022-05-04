@@ -58,13 +58,13 @@ These instructions will be executed before the first or the second reproducing.
 ## Reproduction of the row **Uncertainty** of table 3
 
 
-- Code : sql file
+- Run the script SQL:
+
 ```sh
 sql/1_confidence.sql
 ```
 
 
-		- run the script 1_confidence.sql
 
 
 
