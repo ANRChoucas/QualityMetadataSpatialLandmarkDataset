@@ -40,8 +40,8 @@ https://github.com/ANRChoucas/QualityMetadataSpatialLandmarkDataset. There is no
 # Procedure n°2 to reproduce table 3 (row Uncertainty) and table 4 
 
 All the steps described below concern the camptocamp.org data source. To get the results of the other data sources 
-(OpenStreeetMap, Refuges.info, rando.ecrins-parcnational.fr and rando.parc-du-vercors.fr), it will be necessary 
-to adapt the link of dataset downloaded and the table names in the SQL scripts. 
+(OpenStreeetMap.org, Refuges.info, rando.ecrins-parcnational.fr and rando.parc-du-vercors.fr), it will be necessary 
+to adapt the link of dataset to download and the table names in the SQL scripts. 
 
 
 ## Loading data
