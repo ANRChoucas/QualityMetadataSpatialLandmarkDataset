@@ -2,6 +2,6 @@
 .classpath
 .project
 .settings
-/data/alignment
-/data/dataset
-/data/resultat
+data/dataset/*.csv
+data/resultat/*.csv
+data/alignment/*.csv
