@@ -24,6 +24,7 @@ and assessing the quality of spatial landmark datasets in mountain area, M.-D. V
 
 <br/>
 
+<!-- ===================================================================================================== -->
 # Procedure n°1 to reproduce table 3 (row Uncertainty) and table 4 
 
 All the steps described below concern the camptocamp.org data source. To get the results of the other data sources 
@@ -35,7 +36,9 @@ to adapt the link of dataset to download and the table names in the SQL scripts.
 These instructions will be executed before the first or the second reproducing that follow.
 
 - Input data : 
-	* initial dataset: [Dataset_Camptocamp_org.csv](https://zenodo.org/record/6514812/files/Dataset_Camptocamp_org.csv?download=1)
+	* initial datasets: 
+		- [Dataset_Camptocamp_org.csv](https://zenodo.org/record/6514812/files/Dataset_Camptocamp_org.csv?download=1)
+		- [Dataset_POI_BDTopo.csv](https://zenodo.org/record/6514812/files/Dataset_POI_BDTopo.csv?download=1)
 	* data matching links results: [matching_result_Camptocamp_and_BDTOPO.csv](https://zenodo.org/record/6518363/files/matching_result_Camptocamp_and_BDTOPO.csv?download=1) 
 	* alignement file between the dataset and the OOR ontology: [Alignment_Camptocamp_OOR.csv](https://zenodo.org/record/6481339/files/Alignment_Camptocamp_OOR.csv?download=1)
 
@@ -70,6 +73,7 @@ sql/1_confidence.sql
 
 <br/>
 
+<!-- ===================================================================================================== -->
 # Procedure n°2 to reproduce data matching and then to have the results of a section of table 3
 
 1. Input ressourcesSource material:
@@ -79,4 +83,12 @@ The five files : "Alignment between type of landmark in different sources and th
 
 Installation of the Java project “QualityMetadataSpatialLandmarkDataset”. See the readme:
 https://github.com/ANRChoucas/QualityMetadataSpatialLandmarkDataset. There is not need You don’t need to install MultiCriteriaMatching code. It is a depedency library of the project  QualityMetadataSpatialLandmarkDataset (maven project). 
+
+
+
+
+
+<!-- ## 4. To launch the creation of XML metadata files:
+The main is into MainMetadataChoucas.java. You have to specify the source. -->
+
 
