@@ -19,14 +19,14 @@ import fr.ign.lastig.choucas.loader.LoaderBDTopo;
 import fr.ign.lastig.choucas.loader.LoaderC2C;
 
 
-
+/**
+ * 
+ * @author marie-dominique
+ */
 public class MainMatchingCamptocampBdtopo {
-    
     
 	private static final double DISTANCE_FILTRE_CANDIDAT = 300;
     
-    
-
     public static void main(String[] args) {
         
         // ----------------------------------------------------------------
@@ -58,7 +58,7 @@ public class MainMatchingCamptocampBdtopo {
         CritereSemantique cs = new CritereSemantique(dwp);
         cs.setSeuil(0.7);
         listCritere.add(cs);
-        // System.out.println("Critère sémantique = " + cs.getSeuil());
+        System.out.println("Critère sémantique = " + cs.getSeuil());
         
         evidenceAlgoFusionCritere.setListCritere(listCritere);
         
@@ -77,10 +77,16 @@ public class MainMatchingCamptocampBdtopo {
         // Liste des résultats d'appariement:
         List<LigneResultat> listeRes = new ArrayList<LigneResultat>();
         int nbSansCandidat = 0;
-/*        
+        
         // Boucle sur chaque itinéraire de C2C
         int cpt = 1;
         for (Feature c2c : popComp) {
+        	
+        	if (!c2c.getAttribute("id").equals("144923"))
+        			continue;
+        	//if (!c2c.getAttribute("id").equals("144923") && !c2c.getAttribute("id").equals("43030") 
+        	//		&& !c2c.getAttribute("id").equals("926012"))
+        	//	continue;
         	
         	// On filtre les candidats
             List<Feature> candidatListe = new ArrayList<Feature>();
@@ -110,17 +116,23 @@ public class MainMatchingCamptocampBdtopo {
         TableauResultatFrame tableauPanel = new TableauResultatFrame();
         tableauPanel.displayEnsFrame("Appariement [1 - 2]", listeRes);
         int[] tab = tableauPanel.analyse();
-        LOGGER.info("NB non-app : " + tab[0]);
-        LOGGER.info("NB app : " + tab[1]);
-        LOGGER.info("NB d'indécis : " + tab[2]);
-        LOGGER.info("NB sans candidat : " + nbSansCandidat);
-        System.out.println("Nb feature c2c = " + popRef.size());
-        System.out.println("Nb feature ign = " + popComp.size());
+        
+        System.out.println("");
+        
+        System.out.println("Nb feature c2c = " + popComp.size());
+        System.out.println("Nb feature ign = " + popRef.size());
+        
+        System.out.println("");
+        
+        System.out.println("NB non-app : " + tab[0]);
+        System.out.println("NB app : " + tab[1]);
+        System.out.println("NB d'indécis : " + tab[2]);
+        System.out.println("NB sans candidat : " + nbSansCandidat);
         
         ExportToCSV.exportAppariement(listCritere, 
         		evidenceAlgoFusionCritere.getSeuilIndecision(),
-        		listeRes, "./data/resultat/ign-c2c-");
-*/        
+        		listeRes, "./data/resultat/c2c-bdtopo-");
+        
         System.out.println("");
         System.out.println("===========================    Fin    ===========================");
     }

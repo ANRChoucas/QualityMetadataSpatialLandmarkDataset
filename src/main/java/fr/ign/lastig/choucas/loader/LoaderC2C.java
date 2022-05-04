@@ -3,6 +3,10 @@ package fr.ign.lastig.choucas.loader;
 import static java.nio.charset.StandardCharsets.UTF_8;
 
 import java.io.File;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -21,12 +25,19 @@ import fr.ign.cogit.appariement.Feature;
 import fr.ign.lastig.choucas.alignment.AlignC2C;
 
 public class LoaderC2C {
+	
+	private static final String BDD_URL = "jdbc:postgresql://localhost:5432/repere";
+    private static final String BDD_USER = "test";
+    private static final String BDD_PASSWD = "test";
 
 	public static List<Feature> getToponyme() {
 		
 		List<Feature> bdtopoFeature = new ArrayList<Feature>();
 		
 		try {
+			
+			Class.forName("org.postgresql.Driver");
+    		Connection con = DriverManager.getConnection(BDD_URL, BDD_USER, BDD_PASSWD);
     		
 			File fileC2C = new File("./data/dataset/Dataset_Camptocamp_org.csv");
     		
@@ -52,19 +63,33 @@ public class LoaderC2C {
 					String uri = AlignC2C.getURI(type);
 					if (uri == null) uri = "";
     			
-					Geometry g = reader.read(csvRow.getField(3));
+					String wktGeom = csvRow.getField(3);
+					Geometry g = reader.read(wktGeom);
 					Point pt = factory.createPoint(new Coordinate(g.getCoordinate().x, g.getCoordinate().y));
 					Feature defaultFeature = new Feature(pt);
     			
 					defaultFeature.addAttribut("id", id);
 					defaultFeature.addAttribut("uri", uri);
-					defaultFeature.addAttribut("nom", nom);
+					defaultFeature.addAttribut("nom", nom.replace("\"", ""));
     			
 					// System.out.println(id + "," + uri + ", " + nom);
-					
+					/*String sqlInsert = " INSERT INTO ficc2c (id, nom, type, uri, geom) VALUES ("
+							+ "'" + id + "', "
+							+ "'" + nom.replace("'", "''") + "', "
+							+ "'" + type + "', "
+							+ "'" + uri + "', "
+							+ " ST_GeomFromText('" + wktGeom + "', 2154) "
+							+ "); ";
+					// System.out.println(sqlInsert);
+					Statement stSelectG = con.createStatement();
+	        		stSelectG.executeUpdate(sqlInsert);
+	        		stSelectG.close();*/
+	        		
 					bdtopoFeature.add(defaultFeature);
 				}
     		}
+    		
+    		con.close();
     		
     	} catch (Exception e) {
     		e.printStackTrace();

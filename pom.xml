@@ -113,7 +113,7 @@
 </dependency>
 		 
 		 <!-- GEOXYGENE -->
-		 <!-- 
+		 
         <dependency>
             <groupId>fr.ign.cogit</groupId>
             <artifactId>geoxygene-api</artifactId>
@@ -141,7 +141,7 @@
             <artifactId>geoxygene-contrib</artifactId>
             <version>${geoxygene.noyau.version}</version>
         </dependency>
-         -->
+         
         <dependency>
             <groupId>org.geotools</groupId>
             <artifactId>gt-referencing</artifactId>
