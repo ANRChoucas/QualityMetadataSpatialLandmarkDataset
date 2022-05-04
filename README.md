@@ -14,6 +14,8 @@ and assessing the quality of spatial landmark datasets in mountain area, M.-D. V
 >     * [Reproduction of the row **Uncertainty** of table 3](#reproduction-of-the-row-uncertainty-of-table-3)
 >     * [Reproduction of table 4](#reproduction-of-table-4)
 > - [Procedure n°2 to reproduce data matching and then to have the results of a section of table 3](#procedure-n2-to-reproduce-data-matching-and-then-to-have-the-results-of-a-section-of-table-3)
+>     * [Loading data](#loading-data-for-procedure-n2)
+
 
 # Development & Contributions
 * Institute: LASTIG, Univ Gustave Eiffel, ENSG, IGN
@@ -110,16 +112,54 @@ These instructions will be executed before the first or the second reproducing t
 <!-- ===================================================================================================== -->
 # Procedure n°2 to reproduce data matching and then to have the results of a section of table 3
 
-1. Input ressourcesSource material:
+<br/>
 
-The six dataset files : "Five spatial landmark datasets" downloaded on the plateform Zenodo (version 1.0)
-The five files : "Alignment between type of landmark in different sources and the concept in the spatial reference objects ontology" on the plateform Zenodo (version 1.0)
+## Loading data for procedure n°2
 
-Installation of the Java project “QualityMetadataSpatialLandmarkDataset”. See the readme:
-https://github.com/ANRChoucas/QualityMetadataSpatialLandmarkDataset. There is not need You don’t need to install MultiCriteriaMatching code. It is a depedency library of the project  QualityMetadataSpatialLandmarkDataset (maven project). 
+1. Input ressources:
+
+- The six dataset files : [Five spatial landmark datasets" downloaded on the plateform Zenodo (version 1.0)](https://zenodo.org/record/6514812)
+- The five files : [Alignment between type of landmark in different sources and the concept in the spatial reference objects ontology](https://zenodo.org/record/6481339)
+
+2. The current Java project “QualityMetadataSpatialLandmarkDataset”. There is not need You don’t need to install 
+   *MultiCriteriaMatching* code. It is a depedency library of the project QualityMetadataSpatialLandmarkDataset (maven project). 
 
 
+## Step n°1: installation of the Java project “QualityMetadataSpatialLandmarkDataset”
 
+- Java Install:
+	* Download and install the Java Development Kit (JDK) (jdk 8) from the Oracle website
+- Eclipse
+	* Download and install the IDE Eclipse
+- Download the project *QualityMetadataSpatialLandmarkDataset* on your local system
+- Import the project in Eclipse like a maven project
+
+
+## Step n°2: import dataset files in the “QualityMetadataSpatialLandmarkDataset” project
+
+- drop the six landmark dataset files in the data/dataset folder
+- drop the five alignements files in the data/alignment folder
+
+## Step n°3, launch data matching script
+
+Launch the Java main file MainMatchingCamptocampBdtopo.java. 
+This program loads data and computes the matching links between the sources of datasets and the BDTOPO dataset.
+
+At the end of the computation, the data are matched and the results are stored as a CSV file (e.g. c2c-bdtopo-XXX.csv”) in the resultat folder. 
+Note : rows one (1:0)  and two (1:1) of Table 3 are obtained directly from the Java console print
+
+
+## Step  n°4, Validate the data matching results (manually)
+
+1. Launch QGIs 
+2. Install the plugIn 
+	* Copy the visu_valide_MultiCriteriaMatching plugIn in the QGIS folder 
+	* Open QGIS; 
+	* In the QGIS Extensions look for the visu_valide_MultiCriteriaMatching plugIn;  a small icon is added on the QGIS ‘s  plugIn  toolbar  
+3. Execute the plugIn visu_valide_MultiCriteriaMatching by click on the button in toolbar
+4. Import the file creating in the step before. 
+5. Validate landmark by landmark
+6. The results are store in a shapefile
 
 
 <!-- ## 4. To launch the creation of XML metadata files:
