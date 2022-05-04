@@ -60,6 +60,7 @@ These instructions will be executed before the first or the second reproducing t
 
 - Run the script SQL **sql/1_confidence.sql**
 
+<br/>
 
 ## Reproduction of table 4
 
