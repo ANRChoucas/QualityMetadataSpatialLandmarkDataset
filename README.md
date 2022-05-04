@@ -11,6 +11,7 @@ and assessing the quality of spatial landmark datasets in mountain area*
 > - [Development & Contributions](#Development-&-Contributions)
 > - [Procedure n°1 to reproduce data matching and then to have the results of a section of table 3](#procedure-n1-to-reproduce-data-matching-and-then-to-have-the-results-of-a-section-of-table-3)
 > - [Procedure n°2 to reproduce table 3 (row Uncertainty) and table 4 ](#procedure-n2-to-reproduce-table-3-row-uncertainty-and-table-4)
+>     * [Loading data](#Loading-data)
 >     * [Reproduction of the row **Uncertainty** of table 3](#reproduction-of-the-row-uncertainty-of-table-3)
 >     * [Reproduction of table 4](#reproduction-of-table-4)
 
@@ -38,22 +39,31 @@ https://github.com/ANRChoucas/QualityMetadataSpatialLandmarkDataset. There is no
 
 # Procedure n°2 to reproduce table 3 (row Uncertainty) and table 4 
 
-## Reproduction of the row **Uncertainty** of table 3
+## Loading data
+
+These instructions will be executed before the first or the second reproducing.
 
 - Input data : 
 	* initial dataset (e.g. dataset_camptocamp_org)
 	* data matching links results (e.g. matching_result_Camptocamp_and_BDTOPO.csv )
 	* alignement file between the dataset and the OOR ontology (e.g. alignment_camptocamp_oor)
-- Code : sql file
-```sh
-sql/1_confidence.sql
-```
 - Coding environnement: PostGreSQL/POSTGIS
 - Steps to follow
 	* Step 1: create a database in PostGreSQL (e.g. agile_metadata_2022)
 	* Step 2: install postgis extension for this new database (see Extension menu)
 	* Step 3: 
 		- Import all the needed data in the postgres database: run SCRIPT.sql
+		
+
+## Reproduction of the row **Uncertainty** of table 3
+
+
+- Code : sql file
+```sh
+sql/1_confidence.sql
+```
+
+
 		- run the script 1_confidence.sql
 
 
