@@ -1,7 +1,7 @@
 # QualityMetadataSpatialLandmarkDataset
 
-This project contains two procedures to reproduce the results of the paper *M.-D. Van Damme, A.-M. Olteanu Raimond A method to produce metadata describing 
-and assessing the quality of spatial landmark datasets in mountain area*
+This project contains two procedures to reproduce the results of the paper *A method to produce metadata describing 
+and assessing the quality of spatial landmark datasets in mountain area, M.-D. Van Damme, A.-M. Olteanu Raimond*
 
 <!-- Metadata describing and assessing the quality of spatial landmark datasets in mountain area. -->
 
@@ -49,8 +49,8 @@ to adapt the link of dataset to download and the table names in the SQL scripts.
 These instructions will be executed before the first or the second reproducing.
 
 - Input data : 
-	* initial dataset (e.g. dataset_camptocamp_org)
-	https://zenodo.org/record/6514812/files/Dataset_Camptocamp_org.csv?download=1
+	* initial dataset: [Dataset_Camptocamp_org.csv](https://zenodo.org/record/6514812/files/Dataset_Camptocamp_org.csv?download=1)
+	
 	
 	The six dataset files : "Five spatial landmark datasets" downloaded on the plateform Zenodo (version 1.0)
 	
