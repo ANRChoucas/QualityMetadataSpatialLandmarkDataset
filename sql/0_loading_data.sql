@@ -76,8 +76,10 @@ update dataset_camptocamp_org a set uri= (select uri from alignment_camptocamp_o
 
 
 -- simplify uri
-Update dataset_camptocamp_org
-Set uri = replace(replace(uri, 'http://purl.org/choucas.ign.fr/oor#', '') , 'http', '');
+Update matching_result_camptocamp_and_bdtopo
+Set uri_source = replace(replace(uri_source, 'http://purl.org/choucas.ign.fr/oor#', '') , 'http', '');
+Update matching_result_camptocamp_and_bdtopo
+Set uri_candidat = replace(replace(uri_candidat, 'http://purl.org/choucas.ign.fr/oor#', '') , 'http', '');
 
 
 -- geometry
