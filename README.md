@@ -50,15 +50,16 @@ These instructions will be executed before the first or the second reproducing.
 
 - Input data : 
 	* initial dataset: [Dataset_Camptocamp_org.csv](https://zenodo.org/record/6514812/files/Dataset_Camptocamp_org.csv?download=1)
-	
-	
-	The six dataset files : "Five spatial landmark datasets" downloaded on the plateform Zenodo (version 1.0)
-	
-	* data matching links results (e.g. matching_result_Camptocamp_and_BDTOPO.csv )
-	* alignement file between the dataset and the OOR ontology (e.g. alignment_camptocamp_oor)
+	* data matching links results: [matching_result_Camptocamp_and_BDTOPO.csv](https://zenodo.org/record/6518363/files/matching_result_Camptocamp_and_BDTOPO.csv?download=1) 
+	* alignement file between the dataset and the OOR ontology: [Alignment_Camptocamp_OOR.csv](https://zenodo.org/record/6481339/files/Alignment_Camptocamp_OOR.csv?download=1)
+
 - Coding environnement: PostGreSQL/POSTGIS
+
 - Steps to follow
-	* Step 1: create a database in PostGreSQL (e.g. agile_metadata_2022)
+	* Step 1: create a database in PostGreSQL:
+		```sql
+		CREATE DATABASE agile_metadata_2022
+		```
 	* Step 2: install postgis extension for this new database (see Extension menu)
 	* Step 3: 
 		- Import all the needed data in the postgres database: run SCRIPT.sql
