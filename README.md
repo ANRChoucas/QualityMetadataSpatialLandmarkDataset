@@ -20,11 +20,12 @@ and assessing the quality of spatial landmark datasets in mountain area*
 	- Marie-Dominique Van Damme
 	- Ana-Maria Raimond
 
-
+<br/>
 
 # Procedure n°1 to reproduce data matching and then to have the results of a section of table 3
 
 1. Input ressourcesSource material:
+
 The six dataset files : "Five spatial landmark datasets" downloaded on the plateform Zenodo (version 1.0)
 The five files : "Alignment between type of landmark in different sources and the concept in the spatial reference objects ontology" on the plateform Zenodo (version 1.0)
 
@@ -35,3 +36,9 @@ https://github.com/ANRChoucas/QualityMetadataSpatialLandmarkDataset. There is no
 
 
 # Procedure n°2 to reproduce table 3 (row Uncertainty) and table 4 
+
+
+## Reproduction of the row **Uncertainty** of table 3
+
+
+
