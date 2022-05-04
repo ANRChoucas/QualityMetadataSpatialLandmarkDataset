@@ -40,5 +40,19 @@ https://github.com/ANRChoucas/QualityMetadataSpatialLandmarkDataset. There is no
 
 ## Reproduction of the row **Uncertainty** of table 3
 
+- Input data : 
+	* initial dataset (e.g. dataset_camptocamp_org)
+	* data matching links results (e.g. matching_result_Camptocamp_and_BDTOPO.csv )
+	* alignement file between the dataset and the OOR ontology (e.g. alignment_camptocamp_oor)
+- Code : sql file (confidence.sql)
+- Coding environnement: PostGreSQL/POSTGIS
+- Steps to follow
+	* Step 1: create a database in PostGreSQL (e.g. agile_metadata_2022)
+	* Step 2: install postgis extension for this new database (see Extension menu)
+	* Step 3: 
+		- Import all the needed data in the postgres database: run SCRIPT.sql
+		- run the script 1_confidence.sql
+
+
 
 ## Reproduction of table 4
