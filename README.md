@@ -11,10 +11,8 @@ Metadata describing and assessing the quality of spatial landmark datasets in mo
 
 
 > README Contents
-------------------------------
 > - [Development & Contributions](#Development-&-Contributions)
-
-
+> - [Procedure n°1 to reproduce data matching and then to have the results of a section of table 3](#Procedure_n°1_to_reproduce_data_matching_and_then_to_have_the_results_of_a_section_of_table_3)
 
 
 
@@ -30,6 +28,14 @@ Metadata describing and assessing the quality of spatial landmark datasets in mo
 
 
 # Procedure n°1 to reproduce data matching and then to have the results of a section of table 3
+
+1. Input ressourcesSource material:
+The six dataset files : "Five spatial landmark datasets" downloaded on the plateform Zenodo (version 1.0)
+The five files : "Alignment between type of landmark in different sources and the concept in the spatial reference objects ontology" on the plateform Zenodo (version 1.0)
+
+Installation of the Java project “QualityMetadataSpatialLandmarkDataset”. See the readme:
+https://github.com/ANRChoucas/QualityMetadataSpatialLandmarkDataset. There is not need You don’t need to install MultiCriteriaMatching code. It is a depedency library of the project  QualityMetadataSpatialLandmarkDataset (maven project). 
+
 
 
 
