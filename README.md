@@ -1,6 +1,6 @@
 # QualityMetadataSpatialLandmarkDataset
 
-This project contains two procedures to reproduce the results of the paper *A method to produce metadata describing 
+This project contains the procedures to reproduce the results of the paper *A method to produce metadata describing 
 and assessing the quality of spatial landmark datasets in mountain area, M.-D. Van Damme, A.-M. Olteanu Raimond*
 
 <!-- Metadata describing and assessing the quality of spatial landmark datasets in mountain area. -->
