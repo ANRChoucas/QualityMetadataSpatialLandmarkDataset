@@ -51,7 +51,8 @@ These instructions will be executed before the first or the second reproducing t
 		```
 	* Step 2: install postgis extension for this new database (see Extension menu)
 	
-	* Step 3: import all the needed data in the postgres database: run the SQL script **sql/0_loading_data.sql**
+	* Step 3: import all the needed data in the postgres database: run the SQL script 
+		**sql/0_loading_data.sql**
 
 		
 <br/>
