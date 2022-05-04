@@ -9,10 +9,10 @@ and assessing the quality of spatial landmark datasets in mountain area*
 
 > README Contents
 > - [Development & Contributions](#Development-&-Contributions)
-> - [Procedure n°1 to reproduce data matching and then to have the results of a section of table 3](#Procedure_n°1_to_reproduce_data_matching_and_then_to_have_the_results_of_a_section_of_table_3)
-> - [Procedure n°2 to reproduce table 3 (row Uncertainty) and table 4 ](#Procedure_n°2_to_reproduce_table_3_(row_Uncertainty)_and_table_4)
->     * [Reproduction of the row **Uncertainty** of table 3](#Reproduction_of_the_row_**Uncertainty**_of_table_3)
->     * [Reproduction of table 4](#Reproduction_of_table_4)
+> - [Procedure n°1 to reproduce data matching and then to have the results of a section of table 3](#procedure-n1-to-reproduce-data-matching-and-then-to-have-the-results-of-a-section-of-table-3)
+> - [Procedure n°2 to reproduce table 3 (row Uncertainty) and table 4 ](#procedure-n2-to-reproduce-table-3-row-uncertainty-and-table-4)
+>     * [Reproduction of the row **Uncertainty** of table 3](#reproduction-of-the-row-uncertainty-of-table-3)
+>     * [Reproduction of table 4](#reproduction-of-table-4)
 
 # Development & Contributions
 * Institute: LASTIG, Univ Gustave Eiffel, ENSG, IGN
