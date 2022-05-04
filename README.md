@@ -44,7 +44,10 @@ https://github.com/ANRChoucas/QualityMetadataSpatialLandmarkDataset. There is no
 	* initial dataset (e.g. dataset_camptocamp_org)
 	* data matching links results (e.g. matching_result_Camptocamp_and_BDTOPO.csv )
 	* alignement file between the dataset and the OOR ontology (e.g. alignment_camptocamp_oor)
-- Code : sql file (confidence.sql)
+- Code : sql file
+```sh
+sql/1_confidence.sql
+```
 - Coding environnement: PostGreSQL/POSTGIS
 - Steps to follow
 	* Step 1: create a database in PostGreSQL (e.g. agile_metadata_2022)
