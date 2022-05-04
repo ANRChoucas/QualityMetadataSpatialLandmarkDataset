@@ -125,7 +125,7 @@ These instructions will be executed before the first or the second reproducing t
    *MultiCriteriaMatching* code. It is a depedency library of the project QualityMetadataSpatialLandmarkDataset (maven project). 
 
 
-## Step n°1: installation of the Java project “QualityMetadataSpatialLandmarkDataset”
+## Step n°1: installation of the Java project 
 
 - Java Install:
 	* Download and install the Java Development Kit (JDK) (jdk 8) from the Oracle website
@@ -135,7 +135,7 @@ These instructions will be executed before the first or the second reproducing t
 - Import the project in Eclipse like a maven project
 
 
-## Step n°2: import dataset files in the “QualityMetadataSpatialLandmarkDataset” project
+## Step n°2: import dataset files in the project
 
 - drop the six landmark dataset files in the data/dataset folder
 - drop the five alignements files in the data/alignment folder
