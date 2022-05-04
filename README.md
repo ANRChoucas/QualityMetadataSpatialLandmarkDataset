@@ -94,6 +94,9 @@ These instructions will be executed before the first or the second reproducing t
 
 - Run the script SQL **sql/5_Samal_distance.sql** 
 
+#### Missing class "nom"
+
+- Run the script SQL **sql/6_missing_class.sql** 
 
 <br/>
 
