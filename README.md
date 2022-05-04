@@ -71,7 +71,7 @@ These instructions will be executed before the first or the second reproducing t
 
 #### Overall accuracy and Confusion Matrix rows
 
-- run mc-all.sql
+- Run the script SQL **sql/mc-all.sql**
 - import the result in a tabular software like Excel or OpenOffice
 - create a cross table: the values of the first column correspond to the line, 
   the values of the second column correspond to the column and the values of 
@@ -82,8 +82,8 @@ These instructions will be executed before the first or the second reproducing t
 	(lieu-dit, hébergement_isolé), (hébergement_isolé, grange), (hébergement_accessible, gîte), 
 	(hébergement_isolé', 'refuge'); 
   these pairs are used also to compute overall accuracy. 
-- The overall accuracy is the sum of items on the main diagonal 
-   + items correctly classified) divided by the sum of all items from the matrix
+- The overall accuracy is the sum of items on the main diagonal + items correctly classified) 
+  divided by the sum of all items from the matrix
 
 
 
