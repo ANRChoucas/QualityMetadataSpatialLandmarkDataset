@@ -67,7 +67,7 @@ These instructions will be executed before the first or the second reproducing t
 
 #### MeanAdsolute2D, RootMeanSquareError, and AgreementRate Threshold rows 
 
-- Run the script SQL **sql/spatial_accuracy.sql**
+- Run the script SQL **sql/2_spatial_accuracy.sql**
 
 #### Overall accuracy and Confusion Matrix rows
 
