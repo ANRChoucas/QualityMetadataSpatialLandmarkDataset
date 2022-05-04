@@ -5,19 +5,31 @@
 
 
 -- =====================================================================
---  Step 1: import camptocamp dataset from zenodo
+--  Step 1: import camptocamp and bdtopo datasets from zenodo
 --
 
 -- create a new empty table for the camptocamp dataset
 drop table if exists dataset_camptocamp_org;
 create table dataset_camptocamp_org 
 (id character varying (50), nom character varying (100), 
-type character varying (50),geom character varying (100));
+type character varying (50),wktgeom character varying (100));
 
--- import the cvs file into the database, the table just created before
+-- create a new empty table for the bdtopo dataset
+drop table if exists dataset_bdtopo_org;
+create table dataset_bdtopo_org 
+(id character varying (50), nom character varying (100), 
+type character varying (50),wktgeom character varying (100));
+
+-- import the camptocamp cvs file into the database, the table just created before
 copy dataset_camptocamp_org 
 from 'ADD_Your_Path_Here\Dataset_Camptocamp_org.csv' 
 --from 'D:\4_CR1\Publications\AGILE\2022 Agile\reproductibility\datasets\Dataset_Camptocamp_org.csv' 
+with delimiter ',' csv header;
+
+-- import the bdtopo cvs file into the database, the table just created before
+copy dataset_bdtopo_org 
+from 'ADD_Your_Path_Here\Dataset_POI_BDTopo.csv' 
+--from 'D:\4_CR1\Publications\AGILE\2022 Agile\reproductibility\datasets\Dataset_POI_BDTopo.csv' 
 with delimiter ',' csv header;
 
 
@@ -60,10 +72,17 @@ with delimiter ',' csv header;
 
 -- add the uri to the initial data source
 alter table dataset_camptocamp_org add column uri character varying (100);
-update dataset_camptocamp_org a set uri= (select uri from alignment_camptocamp_oor b where a.type=b.type)
+update dataset_camptocamp_org a set uri= (select uri from alignment_camptocamp_oor b where a.type=b.type);
+
 
 -- simplify uri
+Update dataset_camptocamp_org
+Set uri = replace(replace(uri, 'http://purl.org/choucas.ign.fr/oor#', '') , 'http', '');
 
 
 -- geometry
+ALTER TABLE dataset_camptocamp_org ADD geom geometry(Point,2154);
+ALTER TABLE dataset_bdtopo_org ADD geom geometry(Point,2154);
 
+UPDATE dataset_camptocamp_org SET geom = St_Setsrid(ST_GeomFromText(wktgeom), 2154);
+UPDATE dataset_bdtopo_org SET geom = St_Setsrid(ST_GeomFromText(wktgeom), 2154);
