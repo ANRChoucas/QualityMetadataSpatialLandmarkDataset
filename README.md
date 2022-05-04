@@ -61,8 +61,11 @@ These instructions will be executed before the first or the second reproducing.
 		CREATE DATABASE agile_metadata_2022
 		```
 	* Step 2: install postgis extension for this new database (see Extension menu)
-	* Step 3: 
-		- Import all the needed data in the postgres database: run SCRIPT.sql
+	
+	* Step 3: import all the needed data in the postgres database: run the SQL script:
+        ```sh
+        sql/0_loading_data.sql
+        ```
 		
 
 ## Reproduction of the row **Uncertainty** of table 3
