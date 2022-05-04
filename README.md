@@ -65,11 +65,11 @@ These instructions will be executed before the first or the second reproducing t
 
 ## Reproduction of table 4
 
-### MeanAdsolute2D, RootMeanSquareError, and AgreementRate Threshold rows 
+#### MeanAdsolute2D, RootMeanSquareError, and AgreementRate Threshold rows 
 
 - Run the script SQL **sql/spatial_accuracy.sql**
 
-### Overall accuracy and Confusion Matrix rows
+#### Overall accuracy and Confusion Matrix rows
 
 - run mc-all.sql
 - import the result in a tabular software like Excel or OpenOffice
