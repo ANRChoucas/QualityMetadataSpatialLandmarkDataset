@@ -11,6 +11,7 @@ Metadata describing and assessing the quality of spatial landmark datasets in mo
 
 
 > README Contents
+------------------------------
 > - [Development & Contributions](#Development-&-Contributions)
 
 
