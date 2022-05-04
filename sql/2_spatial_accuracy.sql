@@ -1,50 +1,92 @@
-/*
--- C2C
-select avg(st_length(geom))as mean from app_c2c_ign_link1_1  where validation = 1 
-select avg(st_length(geom))as mean from app_c2c_ign_link1_1  where validation = 1 and uri_ref in ('abri', 'bergerie', 'cabane', 'fort', 'refuge', 'ruine')
-select avg(st_length(geom))as mean from app_c2c_ign_link1_1  where validation = 1 and uri_ref in ('gouffre', 'aven', 'grotte', 'caverne', 'cirque', 'vallée', 'gorge', 'ravin', 'arête', 'crête', 'aiguille', 'pic', 'sommet', 'rocher', 'plaine', 'versant', 'ravin', 'col')
+----------------------------------------------------------------
+-- This script computes the confidence measure (DQ_confidence)
+-- It shows an example for one datasources (i.e. Camptocamp) 
+----------------------------------------------------------------
 
-select sqrt(avg(power(st_length(geom), 2.0))) as accuracy from app_c2c_ign_link1_1 where validation = 1
-select sqrt(avg(power(st_length(geom), 2.0))) as accuracy from app_c2c_ign_link1_1 where validation = 1 and uri_ref in ('abri', 'bergerie', 'cabane', 'fort', 'refuge', 'ruine')
-select sqrt(avg(power(st_length(geom), 2.0))) as accuracy from app_c2c_ign_link1_1 where validation = 1 and uri_ref in ('gouffre', 'aven', 'grotte', 'caverne', 'cirque', 'vallée', 'gorge', 'ravin', 'arête', 'crête', 'aiguille', 'pic', 'sommet', 'rocher', 'plaine', 'versant', 'ravin', 'col')
+-- =====================================================================
+-- STEP 1 : compute the MeanAdsolute2D, RootMeanSquareError, and AgreementRate Threshold rows measure; 
+-- three cases are given as example : 
+-- (1) for all the scop; 
+-- (2) for ISOLATED ACCOMODATION and 
+-- (3) for LANDFORM
 
-select 1.0 * count(*) / (select count(*) from app_c2c_ign_link1_1 where validation = 1) from app_c2c_ign_link1_1 where validation = 1 and st_length(geom) <= 30 
-*/
+---------------------------------------------------------------------------------
+-- ALL
+-- it computes the DQ_confidence for all the scope
+-- this result is associated with the metadata file "ADD THE NAME OF THE FILE"
+---------------------------------------------------------------------------------
+-- MeanAdsolute2D
+select avg(st_length(ST_MakeLine(c.geom, b.geom)))as mean 
+from matching_result_camptocamp_and_bdtopo m
+     inner join dataset_camptocamp_org c on c.id = m.id_source
+	 inner join dataset_bdtopo_org b on b.id = m.id_candidat
+where type_of_matching_results = '1:1 validated';
 
-/*
--- REFINFO
-select avg(st_length(geom))as mean from app_refinfos_ign_link1_1  where validation = 1 
-select avg(st_length(geom))as mean from app_refinfos_ign_link1_1  where validation = 1 and uri_ref in ('abri', 'bergerie', 'cabane', 'fort', 'refuge', 'ruine')
-select avg(st_length(geom))as mean from app_refinfos_ign_link1_1  where validation = 1 and uri_ref in ('gouffre', 'aven', 'grotte', 'caverne', 'cirque', 'vallée', 'gorge', 'ravin', 'arête', 'crête', 'aiguille', 'pic', 'sommet', 'rocher', 'plaine', 'versant', 'ravin', 'col')
+-- RootMeanSquareError
+select sqrt(avg(power(st_length(ST_MakeLine(c.geom, b.geom)), 2.0))) as accuracy 
+from matching_result_camptocamp_and_bdtopo m
+     inner join dataset_camptocamp_org c on c.id = m.id_source
+	 inner join dataset_bdtopo_org b on b.id = m.id_candidat
+where type_of_matching_results = '1:1 validated';
 
-select sqrt(avg(power(st_length(geom), 2.0))) as accuracy from app_refinfos_ign_link1_1 where validation = 1
-select sqrt(avg(power(st_length(geom), 2.0))) as accuracy from app_refinfos_ign_link1_1 where validation = 1 and uri_ref in ('abri', 'bergerie', 'cabane', 'fort', 'refuge', 'ruine')
-select sqrt(avg(power(st_length(geom), 2.0))) as accuracy from app_refinfos_ign_link1_1 where validation = 1 and uri_ref in ('gouffre', 'aven', 'grotte', 'caverne', 'cirque', 'vallée', 'gorge', 'ravin', 'arête', 'crête', 'aiguille', 'pic', 'sommet', 'rocher', 'plaine', 'versant', 'ravin', 'col')
-
-select 1.0 * count(*) / (select count(*) from app_refinfos_ign_link1_1 where validation = 1) from app_refinfos_ign_link1_1 where validation = 1 and st_length(geom) <= 30 
-*/
-/*
--- PARC
-select avg(st_length(geom))as mean from app_parc_ign_link1_1  where validation = 1 
-select avg(st_length(geom))as mean from app_parc_ign_link1_1  where validation = 1 and uri_ref in ('abri', 'bergerie', 'cabane', 'fort', 'refuge', 'ruine')
-select avg(st_length(geom))as mean from app_parc_ign_link1_1  where validation = 1 and uri_ref in ('gouffre', 'aven', 'grotte', 'caverne', 'cirque', 'vallée', 'gorge', 'ravin', 'arête', 'crête', 'aiguille', 'pic', 'sommet', 'rocher', 'plaine', 'versant', 'ravin', 'col')
-
-select sqrt(avg(power(st_length(geom), 2.0))) as accuracy from app_parc_ign_link1_1 where validation = 1
-select sqrt(avg(power(st_length(geom), 2.0))) as accuracy from app_parc_ign_link1_1 where validation = 1 and uri_ref in ('abri', 'bergerie', 'cabane', 'fort', 'refuge', 'ruine')
-select sqrt(avg(power(st_length(geom), 2.0))) as accuracy from app_parc_ign_link1_1 where validation = 1 and uri_ref in ('gouffre', 'aven', 'grotte', 'caverne', 'cirque', 'vallée', 'gorge', 'ravin', 'arête', 'crête', 'aiguille', 'pic', 'sommet', 'rocher', 'plaine', 'versant', 'ravin', 'col')
-
-select 1.0 * count(*) / (select count(*) from app_parc_ign_link1_1 where validation = 1) from app_parc_ign_link1_1 where validation = 1 and st_length(geom) <= 30 
-*/
+-- AgreementRate Threshold
+select 1.0 * count(*) / (select count(*) from matching_result_camptocamp_and_bdtopo where type_of_matching_results = '1:1 validated' ) 
+from matching_result_camptocamp_and_bdtopo m
+     inner join dataset_camptocamp_org c on c.id = m.id_source
+	 inner join dataset_bdtopo_org b on b.id = m.id_candidat
+where type_of_matching_results = '1:1 validated' 
+  and st_length(ST_MakeLine(c.geom, b.geom)) <= 30 ;
 
 
--- OSM
-select avg(st_length(geom))as mean from app_osm_ign_link1_1  where validation = 1 
-select avg(st_length(geom))as mean from app_osm_ign_link1_1  where validation = 1 and uri_ref in ('abri', 'bergerie', 'cabane', 'fort', 'refuge', 'ruine')
-select avg(st_length(geom))as mean from app_osm_ign_link1_1  where validation = 1 and uri_ref in ('gouffre', 'aven', 'grotte', 'caverne', 'cirque', 'vallée', 'gorge', 'ravin', 'arête', 'crête', 'aiguille', 'pic', 'sommet', 'rocher', 'plaine', 'versant', 'ravin', 'col')
+---------------------------------------------------------------------------------
+-- ISOLATED ACCOMODATION - 
+-- It computes the DQ_confidence for a subset of the types 
+-- This is an example for on demand metadata; for example if the user needs to assess only the confidence of the matching algorithm for 
+-- a specific types of landmarks (e.g. those corresponding the the ontology class "isolated accomodation") 
+-- this result is associated with the metadata file "ADD THE NAME OF THE FILE"
+---------------------------------------------------------------------------------
+-- MeanAdsolute2D
+select avg(st_length(ST_MakeLine(c.geom, b.geom)))as mean 
+from matching_result_camptocamp_and_bdtopo m
+     inner join dataset_camptocamp_org c on c.id = m.id_source
+	 inner join dataset_bdtopo_org b on b.id = m.id_candidat
+where type_of_matching_results = '1:1 validated'
+  and uri_source in ('abri', 'bergerie', 'cabane', 'fort', 'refuge', 'ruine');
 
-select sqrt(avg(power(st_length(geom), 2.0))) as accuracy from app_osm_ign_link1_1 where validation = 1
-select sqrt(avg(power(st_length(geom), 2.0))) as accuracy from app_osm_ign_link1_1 where validation = 1 and uri_ref in ('abri', 'bergerie', 'cabane', 'fort', 'refuge', 'ruine')
-select sqrt(avg(power(st_length(geom), 2.0))) as accuracy from app_osm_ign_link1_1 where validation = 1 and uri_ref in ('gouffre', 'aven', 'grotte', 'caverne', 'cirque', 'vallée', 'gorge', 'ravin', 'arête', 'crête', 'aiguille', 'pic', 'sommet', 'rocher', 'plaine', 'versant', 'ravin', 'col')
+-- RootMeanSquareError
+select sqrt(avg(power(st_length(ST_MakeLine(c.geom, b.geom)), 2.0))) as accuracy 
+from matching_result_camptocamp_and_bdtopo m
+     inner join dataset_camptocamp_org c on c.id = m.id_source
+	 inner join dataset_bdtopo_org b on b.id = m.id_candidat
+where type_of_matching_results = '1:1 validated'
+  and uri_source in ('abri', 'bergerie', 'cabane', 'fort', 'refuge', 'ruine');
 
-select 1.0 * count(*) / (select count(*) from app_osm_ign_link1_1 where validation = 1) from app_osm_ign_link1_1 where validation = 1 and st_length(geom) <= 30 
+
+---------------------------------------------------------------------------------
+-- LANDFORM
+-- It computes the DQ_confidence for a subset of the types 
+-- This is an example for on demand metadata; for example if the user needs to assess only the confidence of the matching algorithm for 
+-- a specific types of landmarks (e.g. those corresponding the the ontology class "landform") 
+-- this result is associated with the metadata file "ADD THE NAME OF THE FILE"
+---------------------------------------------------------------------------------
+-- MeanAdsolute2D
+select avg(st_length(ST_MakeLine(c.geom, b.geom)))as mean 
+from matching_result_camptocamp_and_bdtopo m
+     inner join dataset_camptocamp_org c on c.id = m.id_source
+	 inner join dataset_bdtopo_org b on b.id = m.id_candidat
+where type_of_matching_results = '1:1 validated'
+  and uri_source in ('gouffre', 'aven', 'grotte', 'caverne', 'cirque', 'vallée', 'gorge', 'ravin', 'arête', 'crête', 'aiguille', 
+					 'pic', 'sommet', 'rocher', 'plaine', 'versant', 'ravin', 'col')
+					 
+-- RootMeanSquareError
+select sqrt(avg(power(st_length(ST_MakeLine(c.geom, b.geom)), 2.0))) as accuracy 
+from matching_result_camptocamp_and_bdtopo m
+     inner join dataset_camptocamp_org c on c.id = m.id_source
+	 inner join dataset_bdtopo_org b on b.id = m.id_candidat
+where type_of_matching_results = '1:1 validated'
+  and uri_source in ('gouffre', 'aven', 'grotte', 'caverne', 'cirque', 'vallée', 'gorge', 'ravin', 'arête', 'crête', 'aiguille', 
+					 'pic', 'sommet', 'rocher', 'plaine', 'versant', 'ravin', 'col')
+
+
+
 
