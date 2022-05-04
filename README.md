@@ -9,11 +9,11 @@ and assessing the quality of spatial landmark datasets in mountain area, M.-D. V
 
 > README Contents
 > - [Development & Contributions](#Development-&-Contributions)
-> - [Procedure n°1 to reproduce data matching and then to have the results of a section of table 3](#procedure-n1-to-reproduce-data-matching-and-then-to-have-the-results-of-a-section-of-table-3)
-> - [Procedure n°2 to reproduce table 3 (row Uncertainty) and table 4 ](#procedure-n2-to-reproduce-table-3-row-uncertainty-and-table-4)
+> - [Procedure n°1 to reproduce table 3 (row Uncertainty) and table 4 ](#procedure-n1-to-reproduce-table-3-row-uncertainty-and-table-4)
 >     * [Loading data](#Loading-data)
 >     * [Reproduction of the row **Uncertainty** of table 3](#reproduction-of-the-row-uncertainty-of-table-3)
 >     * [Reproduction of table 4](#reproduction-of-table-4)
+> - [Procedure n°2 to reproduce data matching and then to have the results of a section of table 3](#procedure-n2-to-reproduce-data-matching-and-then-to-have-the-results-of-a-section-of-table-3)
 
 # Development & Contributions
 * Institute: LASTIG, Univ Gustave Eiffel, ENSG, IGN
@@ -24,29 +24,15 @@ and assessing the quality of spatial landmark datasets in mountain area, M.-D. V
 
 <br/>
 
-# Procedure n°1 to reproduce data matching and then to have the results of a section of table 3
-
-1. Input ressourcesSource material:
-
-The six dataset files : "Five spatial landmark datasets" downloaded on the plateform Zenodo (version 1.0)
-The five files : "Alignment between type of landmark in different sources and the concept in the spatial reference objects ontology" on the plateform Zenodo (version 1.0)
-
-Installation of the Java project “QualityMetadataSpatialLandmarkDataset”. See the readme:
-https://github.com/ANRChoucas/QualityMetadataSpatialLandmarkDataset. There is not need You don’t need to install MultiCriteriaMatching code. It is a depedency library of the project  QualityMetadataSpatialLandmarkDataset (maven project). 
-
-
-<br/>
-
-# Procedure n°2 to reproduce table 3 (row Uncertainty) and table 4 
+# Procedure n°1 to reproduce table 3 (row Uncertainty) and table 4 
 
 All the steps described below concern the camptocamp.org data source. To get the results of the other data sources 
 (OpenStreeetMap.org, Refuges.info, rando.ecrins-parcnational.fr and rando.parc-du-vercors.fr), it will be necessary 
 to adapt the link of dataset to download and the table names in the SQL scripts. 
 
-
 ## Loading data
 
-These instructions will be executed before the first or the second reproducing.
+These instructions will be executed before the first or the second reproducing that follow.
 
 - Input data : 
 	* initial dataset: [Dataset_Camptocamp_org.csv](https://zenodo.org/record/6514812/files/Dataset_Camptocamp_org.csv?download=1)
@@ -77,8 +63,20 @@ These instructions will be executed before the first or the second reproducing.
 sql/1_confidence.sql
 ```
 
-
-
-
-
 ## Reproduction of table 4
+
+
+
+
+<br/>
+
+# Procedure n°2 to reproduce data matching and then to have the results of a section of table 3
+
+1. Input ressourcesSource material:
+
+The six dataset files : "Five spatial landmark datasets" downloaded on the plateform Zenodo (version 1.0)
+The five files : "Alignment between type of landmark in different sources and the concept in the spatial reference objects ontology" on the plateform Zenodo (version 1.0)
+
+Installation of the Java project “QualityMetadataSpatialLandmarkDataset”. See the readme:
+https://github.com/ANRChoucas/QualityMetadataSpatialLandmarkDataset. There is not need You don’t need to install MultiCriteriaMatching code. It is a depedency library of the project  QualityMetadataSpatialLandmarkDataset (maven project). 
+
