@@ -90,6 +90,9 @@ These instructions will be executed before the first or the second reproducing t
 
 - Run the script SQL **sql/4_duplicate_all** by changing each time the name of the dataset table
 
+#### Non quantitative attribute accuracy measures
+
+- Run the script SQL **sql/5_Samal_distance.sql** 
 
 
 <br/>
