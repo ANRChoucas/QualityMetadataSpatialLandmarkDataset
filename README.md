@@ -72,7 +72,7 @@ These instructions will be executed before the first or the second reproducing t
 
 #### Overall accuracy and Confusion Matrix rows
 
-- Run the script SQL **sql/mc-all.sql**
+- Run the script SQL **sql/3_confusion_matrix_all.sql**
 - Import the result in a tabular software like Excel or OpenOffice
 - Create a cross table: the values of the first column correspond to the line, 
   the values of the second column correspond to the column and the values of 
