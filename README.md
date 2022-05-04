@@ -39,12 +39,21 @@ https://github.com/ANRChoucas/QualityMetadataSpatialLandmarkDataset. There is no
 
 # Procedure n°2 to reproduce table 3 (row Uncertainty) and table 4 
 
+All the steps described below concern the camptocamp.org data source. To get the results of the other data sources 
+(OpenStreeetMap, Refuges.info, rando.ecrins-parcnational.fr and rando.parc-du-vercors.fr), it will be necessary 
+to adapt the link of dataset downloaded and the table names in the SQL scripts. 
+
+
 ## Loading data
 
 These instructions will be executed before the first or the second reproducing.
 
 - Input data : 
 	* initial dataset (e.g. dataset_camptocamp_org)
+	https://zenodo.org/record/6514812/files/Dataset_Camptocamp_org.csv?download=1
+	
+	The six dataset files : "Five spatial landmark datasets" downloaded on the plateform Zenodo (version 1.0)
+	
 	* data matching links results (e.g. matching_result_Camptocamp_and_BDTOPO.csv )
 	* alignement file between the dataset and the OOR ontology (e.g. alignment_camptocamp_oor)
 - Coding environnement: PostGreSQL/POSTGIS
