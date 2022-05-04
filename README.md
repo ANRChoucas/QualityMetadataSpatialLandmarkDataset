@@ -33,7 +33,6 @@ All the steps described below concern the camptocamp.org data source. To get the
 (OpenStreeetMap.org, Refuges.info, rando.ecrins-parcnational.fr and rando.parc-du-vercors.fr), it will be necessary 
 to adapt the link of dataset to download and the table names in the SQL scripts. 
 
-<br/>
 
 ## Loading data for procedure n°1
 
@@ -112,7 +111,6 @@ These instructions will be executed before the first or the second reproducing t
 <!-- ===================================================================================================== -->
 # Procedure n°2 to reproduce data matching and then to have the results of a section of table 3
 
-<br/>
 
 ## Loading data for procedure n°2
 
