@@ -10,7 +10,7 @@ and assessing the quality of spatial landmark datasets in mountain area, M.-D. V
 > README Contents
 > - [Development & Contributions](#Development-&-Contributions)
 > - [Procedure n°1 to reproduce table 3 (row Uncertainty) and table 4 ](#procedure-n1-to-reproduce-table-3-row-uncertainty-and-table-4)
->     * [Loading data](#Loading-data)
+>     * [Loading data](#loading-data-for-procedure-n1)
 >     * [Reproduction of the row **Uncertainty** of table 3](#reproduction-of-the-row-uncertainty-of-table-3)
 >     * [Reproduction of table 4](#reproduction-of-table-4)
 > - [Procedure n°2 to reproduce data matching and then to have the results of a section of table 3](#procedure-n2-to-reproduce-data-matching-and-then-to-have-the-results-of-a-section-of-table-3)
