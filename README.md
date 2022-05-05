@@ -109,6 +109,14 @@ These instructions will be executed before the first or the second reproducing t
 
 ![GitHub Logo](/img/completeness.png)
 
+- Run each request in the script SQL **sql/7_completeness.sql** and put the result column per column
+
+- Calculate the sum of elements in each column, for example the sum are stored in line 115.
+
+- Then, you have:
+
+	* Excess = (B115+C115)/E115
+	* Missing items = F115/H115
 
 
 
