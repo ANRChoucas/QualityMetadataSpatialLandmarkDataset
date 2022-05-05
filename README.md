@@ -102,7 +102,14 @@ These instructions will be executed before the first or the second reproducing t
 
 #### Excess and Missing items rows
 
-- TODO (décrire un remplissage d'un un fichier excel)
+
+- You have to create a worksheet in a tabular software like Excel or OpenOffice
+
+- Prepare the worksheet by creating these columns:
+
+![GitHub Logo](/img/completeness.png)
+
+
 
 
 
