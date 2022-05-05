@@ -11,7 +11,7 @@ and assessing the quality of spatial landmark datasets in mountain area, M.-D. V
 > - [Development & Contributions](#Development-&-Contributions)
 > - [Procedure n°1 to reproduce table 3 (row Uncertainty) and table 4 ](#procedure-n1-to-reproduce-table-3-row-uncertainty-and-table-4)
 >     * [Loading data](#loading-data-for-procedure-n1)
->     * [Reproduction of the row **Uncertainty** of table 3](#reproduction-of-the-row-uncertainty-of-table-3)
+>     * [Reproduction of the row *Uncertainty* of table 3](#reproduction-of-the-row-uncertainty-of-table-3)
 >     * [Reproduction of table 4](#reproduction-of-table-4)
 > - [Procedure n°2 to reproduce data matching and then to have the results of a section of table 3](#procedure-n2-to-reproduce-data-matching-and-then-to-have-the-results-of-a-section-of-table-3)
 >     * [Loading data](#loading-data-for-procedure-n2)
@@ -151,7 +151,7 @@ Note : rows one (1:0)  and two (1:1) of Table 3 are obtained directly from the J
 
 1. Launch QGIs 
 2. Install the plugIn 
-	* Copy the visu_valide_MultiCriteriaMatching plugIn in the QGIS folder 
+	* Copy the [visu_valide_MultiCriteriaMatching plugIn](https://github.com/ANRChoucas/VisuValideMultiCriteriaMatching) in the QGIS folder 
 	* Open QGIS; 
 	* In the QGIS Extensions look for the visu_valide_MultiCriteriaMatching plugIn;  a small icon is added on the QGIS ‘s  plugIn  toolbar  
 3. Execute the plugIn visu_valide_MultiCriteriaMatching by click on the button in toolbar
