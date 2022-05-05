@@ -142,6 +142,7 @@
             <version>${geoxygene.noyau.version}</version>
         </dependency>
          
+         
         <dependency>
             <groupId>org.geotools</groupId>
             <artifactId>gt-referencing</artifactId>
@@ -218,6 +219,16 @@
 			<name>Geomatys Repository</name>
 			<url>https://nexus.geomatys.com/repository/geotoolkit/</url>
 		</repository>
+		<repository>
+            <id>snapshots</id>
+            <name>Nexus Snapshots Repository</name>
+            <url>https://forge-cogit.ign.fr/nexus/content/repositories/snapshots/</url>
+        </repository>
+        <repository>
+            <id>releases</id>
+            <name>Internal Releases</name>
+            <url>https://forge-cogit.ign.fr/nexus/content/repositories/releases/</url>
+        </repository>
 	</repositories>
 
 

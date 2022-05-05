@@ -3,10 +3,6 @@ package fr.ign.lastig.choucas.loader;
 import static java.nio.charset.StandardCharsets.UTF_8;
 
 import java.io.File;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -23,13 +19,7 @@ import de.siegmar.fastcsv.reader.CsvRow;
 import fr.ign.cogit.appariement.Feature;
 import fr.ign.lastig.choucas.alignment.AlignBDTopo;
 
-
-
 public class LoaderBDTopo {
-	
-	private static final String BDD_URL = "jdbc:postgresql://localhost:5432/repere";
-    private static final String BDD_USER = "test";
-    private static final String BDD_PASSWD = "test";
 	
 	public static List<Feature> getToponyme() {
 		
@@ -37,10 +27,9 @@ public class LoaderBDTopo {
 		// int cpt = 0;
 		try {
 			
-			Class.forName("org.postgresql.Driver");
-    		Connection con = DriverManager.getConnection(BDD_URL, BDD_USER, BDD_PASSWD);
-    		
 			File fileC2C = new File("./data/dataset/Dataset_POI_BDTopo.csv");
+			File fileAltName = new File("./data/dataset/Dataset_POI_ALT_NAME_BDTopo.csv");
+			
     		
     		WKTReader reader = new WKTReader();
     		GeometryFactory factory = new GeometryFactory();
@@ -74,33 +63,25 @@ public class LoaderBDTopo {
 					defaultFeature.addAttribut("nom", nom);
 
 					// System.out.println(id + "," + uri + ", " + nom);
-					// graphies
-	                String sql = " Select nom "
-	                		+ " From bdtopo_graphie "
-	                		+ " Where id = '" + id + "' ";
-	                Statement stSelectG = con.createStatement();
-	        		ResultSet rsG = stSelectG.executeQuery(sql);
-	        		while (rsG.next()) {
-	        			String graphie = rsG.getString("nom");
-	        			// System.out.println("   " + graphie);
-	        			defaultFeature.addGraphie(graphie);
-	        		}
-	        		rsG.close();
-	        		stSelectG.close();
-	        		
-	        		/*String sqlInsert = " INSERT INTO ficbdtopo (id, nom, type, uri, geom) VALUES ("
-	        				+ "'" + id + "', "
-	        				+ "'" + nom.replace("'", "''") + "', "
-	        				+ "'" + type.replace("'", "''") + "', "
-	        				+ "'" + uri.replace("'", "''") + "', "
-	        				+ " ST_GeomFromText('" + wktGeom + "', 2154) "
-	        				+ "); ";
-	        		// System.out.println(sqlInsert);
-	        		Statement stSelectG2 = con.createStatement();
-	        		stSelectG2.executeUpdate(sqlInsert);
-	        		stSelectG2.close();
-	        		cpt++;*/
 					
+					try (CsvReader csvAN = CsvReader.builder()
+							.fieldSeparator(',')
+							.quoteCharacter('"')
+							.build(fileAltName.toPath(), UTF_8)) {
+						for (final Iterator<CsvRow> iteratorAN = csvAN.iterator(); iteratorAN.hasNext();) {
+							final CsvRow csvRowAN = iteratorAN.next();
+					
+							String idAN = csvRowAN.getField(0);
+							
+							if (idAN.equals(id)) {
+								// System.out.println(idAN + "--" + id);
+								String graphie = csvRowAN.getField(1);
+								// System.out.println("   " + graphie);
+								defaultFeature.addGraphie(graphie);
+							}
+						}
+					}
+	        		
 					ignFeature.add(defaultFeature);
 				}
     		}
@@ -109,8 +90,6 @@ public class LoaderBDTopo {
     		e.printStackTrace();
     	}
 		
-		// System.out.println("cpt = " + cpt);
-        
         return ignFeature;
 	}
 }
