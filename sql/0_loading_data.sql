@@ -70,9 +70,24 @@ from 'ADD_Your_Path_Here\Alignment_Camptocamp_OOR.csv'
 --from 'D:\4_CR1\Publications\AGILE\2022 Agile\reproductibility\alignements\Alignment_Camptocamp_OOR.csv' 
 with delimiter ',' csv header;
 
+-- create a new empty table for the camptocamp dataset
+drop table if exists alignment_bdtopo_oor;
+create table alignment_bdtopo_oor 
+(type character varying (50), uri character varying (100));
+
+-- import the cvs file into the database, the table juste created before
+copy alignment_bdtopo_oor 
+from 'ADD_Your_Path_Here\Alignment_Camptocamp_OOR.csv'
+--from '/home/marie-dominique/CHOUCAS/ExploGeoGraph/ZENODO/alignement/Alignment_POI_BDTOPO_OOR.csv' 
+with delimiter ',' csv header;
+
 -- add the uri to the initial data source
 alter table dataset_camptocamp_org add column uri character varying (100);
 update dataset_camptocamp_org a set uri= (select uri from alignment_camptocamp_oor b where a.type=b.type);
+
+-- add the uri to the bdtopo source
+alter table dataset_bdtopo_org add column uri character varying (100);
+update dataset_bdtopo_org a set uri= (select uri from alignment_bdtopo_oor b where a.type=b.type);
 
 
 -- simplify uri
