@@ -82,8 +82,8 @@ public class MainMatchingCamptocampBdtopo {
         int cpt = 1;
         for (Feature c2c : popComp) {
         	
-        	if (!c2c.getAttribute("id").equals("144923"))
-        			continue;
+        	// if (!c2c.getAttribute("id").equals("144923"))
+        	//		continue;
         	//if (!c2c.getAttribute("id").equals("144923") && !c2c.getAttribute("id").equals("43030") 
         	//		&& !c2c.getAttribute("id").equals("926012"))
         	//	continue;
