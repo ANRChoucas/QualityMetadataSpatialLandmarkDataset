@@ -54,7 +54,7 @@ public class MainMatchingCamptocampBdtopo {
         System.out.println("Critère toponymique = " + ct.getSeuil());
         
         // Critère sémantique
-        DistanceWuPalmer dwp = new DistanceWuPalmer("/home/marie-dominique/CHOUCAS/OOR/oor_V1.0.1_01102021_MDVD.owl");
+        DistanceWuPalmer dwp = new DistanceWuPalmer("./data/ontology/oor_2c9869e62e0a8.owl");
         CritereSemantique cs = new CritereSemantique(dwp);
         cs.setSeuil(0.7);
         listCritere.add(cs);
