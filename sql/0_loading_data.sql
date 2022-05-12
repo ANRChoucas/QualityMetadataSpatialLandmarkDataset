@@ -77,7 +77,7 @@ create table alignment_bdtopo_oor
 
 -- import the cvs file into the database, the table juste created before
 copy alignment_bdtopo_oor 
-from 'ADD_Your_Path_Here\Alignment_Camptocamp_OOR.csv'
+from 'ADD_Your_Path_Here\Alignment_POI_BDTOPO_OOR.csv'
 --from '/home/marie-dominique/CHOUCAS/ExploGeoGraph/ZENODO/alignement/Alignment_POI_BDTOPO_OOR.csv' 
 with delimiter ',' csv header;
 
