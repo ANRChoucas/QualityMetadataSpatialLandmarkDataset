@@ -14,7 +14,7 @@
 -- it computes the DQ_confidence for all the scope
 -- this result is associated with the metadata file "ADD THE NAME OF THE FILE"
 ---------------------------------------------------------------------------------
-Select round(100.0 - ((conflit.na + wrongmatch.wm)/total.nb :: numeric)*100, 0) as confidence
+Select round(100.0 - ((conflit.na + wrongmatch.wm)/total.nb :: numeric)*100, 0) as confidence_all
 From (select count(*) as nb from dataset_camptocamp_org) as total,
      (select count(distinct(id_source)) as na from matching_result_Camptocamp_and_bdtopo where type_of_matching_results ='uncertain') as conflit,
 	 (select count(*) as wm from matching_result_Camptocamp_and_bdtopo where type_of_matching_results='1:1 non validated') as wrongmatch;
@@ -26,7 +26,7 @@ From (select count(*) as nb from dataset_camptocamp_org) as total,
 -- a specific types of landmarks (e.g. those corresponding the the ontology class "isolated accomodation") 
 -- this result is associated with the metadata file "ADD THE NAME OF THE FILE"
 ---------------------------------------------------------------------------------
-Select round(100.0 - ((conflit.na + wrongmatch.wm)/total.nb :: numeric)*100, 0) as confidence
+Select round(100.0 - ((conflit.na + wrongmatch.wm)/total.nb :: numeric)*100, 0) as confidence_isolated_accomodation
 From (  select count(*) as nb 
 	    from dataset_camptocamp_org 
 	    where replace(replace(uri, 'http://purl.org/choucas.ign.fr/oor#', '') , 'http', '') in ('abri', 'bergerie', 'cabane', 'fort', 'refuge', 'ruine') 
@@ -49,7 +49,7 @@ From (  select count(*) as nb
 -- a specific types of landmarks (e.g. those corresponding the the ontology class "landform") 
 -- this result is associated with the metadata file "ADD THE NAME OF THE FILE"
 ---------------------------------------------------------------------------------
-Select round(100.0 - ((conflit.na + wrongmatch.wm)/total.nb :: numeric)*100, 0) as confidence
+Select round(100.0 - ((conflit.na + wrongmatch.wm)/total.nb :: numeric)*100, 0) as confidence_landform
 From (  select count(*) as nb 
 	    from dataset_camptocamp_org 
 	    where replace(replace(uri, 'http://purl.org/choucas.ign.fr/oor#', '') , 'http', '') in ('gouffre', 'aven', 'grotte', 'caverne', 'cirque', 'vallée', 'gorge', 'ravin', 'arête', 'crête', 'aiguille', 'pic', 'sommet', 'rocher', 'plaine', 'versant', 'ravin', 'col')
