@@ -61,7 +61,11 @@ These instructions will be executed before the first or the second reproducing t
 
 ## Reproduction of the row *Uncertainty* of table 3
 
-- Run the script SQL **sql/1_confidence.sql**
+- Run the first request in the script SQL **sql/1_confidence.sql** to get the DQ_confidence for all the scope.
+
+- Note: the two other scripts compute the DQ_confidence for a subset of the types. This is an example for on demand metadata; 
+  for example if the user needs to assess only the confidence of the matching algorithm for a specific types of landmarks 
+  (e.g. those corresponding the the ontology class "isolated accomodation") 
 
 <br/>
 
