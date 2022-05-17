@@ -15,6 +15,8 @@ and assessing the quality of spatial landmark datasets in mountain area, M.-D. V
 >     * [Reproduction of table 4](#reproduction-of-table-4)
 > - [Procedure n°2 to reproduce data matching and then to have the results of a section of table 3](#procedure-n2-to-reproduce-data-matching-and-then-to-have-the-results-of-a-section-of-table-3)
 >     * [Loading data](#loading-data-for-procedure-n2)
+> - [Procedure n°3 to reproduce boxplot of Samal distance for names in Refuges.info source](#)
+>     * [Loading data](#loading-data-for-procedure-n3)
 
 
 # Development & Contributions
@@ -182,5 +184,44 @@ Note : rows one (1:0)  and two (1:1) of Table 3 are obtained directly from the J
 
 <!-- ## 4. To launch the creation of XML metadata files:
 The main is into MainMetadataChoucas.java. You have to specify the source. -->
+
+
+
+<!-- ===================================================================================================== -->
+# Procedure n°3 to reproduce boxplot of Samal distance for names in Refuges.info source
+
+## Loading data for procedure n°3
+
+- Input data : 
+	* data matching links results: [matching_result_RefugesInfo_and_BDTOPO.csv](https://zenodo.org/record/6518363/files/matching_result_RefugesInfo_and_BDTOPO.csv?download=1) 
+
+- Coding environnement: PostGreSQL/POSTGIS
+
+- Steps to follow
+	* Step 1: create a database in PostGreSQL:
+		```sql
+		CREATE DATABASE agile_metadata_2022
+		```
+	* Step 2: import all the needed data in the postgres database: run the SQL script **sql/p3_0_loading_data.sql**
+
+		
+<br/>
+
+## Generate the distribution for the samal distance
+
+- Run the SQL script **p3_1_boxplot_samal_distance.sql**
+
+- Export query result to .csv file, for example **distances_samal.csv**
+
+
+<br/>
+
+## Create the boxplot
+
+- This is an example to create a boxplot with R software:
+  ```sql
+  x <- read.csv("/home/glagaffe/distsamal.csv",header=T, sep=",")
+  boxplot(x)
+  ```
 
 
