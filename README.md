@@ -15,9 +15,10 @@ and assessing the quality of spatial landmark datasets in mountain area, M.-D. V
 >     * [Reproduction of table 4](#reproduction-of-table-4)
 > - [Procedure n°2 to reproduce data matching and then to have the results of a section of table 3](#procedure-n2-to-reproduce-data-matching-and-then-to-have-the-results-of-a-section-of-table-3)
 >     * [Loading data](#loading-data-for-procedure-n2)
-> - [Procedure n°3 to reproduce boxplot of Samal distance for names in Refuges.info source](#)
+> - [Procedure n°3 to reproduce boxplot of Samal distance for names in Refuges.info source](#procedure-n3-to-reproduce-boxplot-of-samal-distance-for-names-in-refugesinfo-source)
 >     * [Loading data](#loading-data-for-procedure-n3)
-
+>     * [Generate the distribution for the samal distance](#generate-the-distribution-for-the-samal-distance)
+>     * [Create the boxplot](#create-the-boxplot)
 
 # Development & Contributions
 * Institute: LASTIG, Univ Gustave Eiffel, ENSG, IGN
