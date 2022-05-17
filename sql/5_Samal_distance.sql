@@ -15,11 +15,16 @@ select sqrt(avg(power(samal::numeric, 2.0))) as accuracy_name from matching_resu
 
 
 -- it computes the mean Samal distance for all sources and for LANDFORME types 
-select avg(samal::numeric) from matching_result_Camptocamp_and_bdtopo where type_of_matching_results = '1:1 validated' and uri_source in ('gouffre', 'aven', 'grotte', 'caverne', 'cirque', 'vallée', 'gorge', 'ravin', 'arête', 'crête', 'aiguille', 'pic', 'sommet', 'rocher', 'plaine', 'versant', 'ravin', 'col')
+select avg(samal::numeric) 
+from matching_result_Camptocamp_and_bdtopo 
+where type_of_matching_results = '1:1 validated' and uri_source in ('gouffre', 'aven', 'grotte', 'caverne', 'cirque', 'vallée', 'gorge', 'ravin', 'arête', 'crête', 'aiguille', 'pic', 'sommet', 'rocher', 'plaine', 'versant', 'ravin', 'col')
 
 
 -- it computes the root mean square error Samal distance for all sources and for LANDFORME types 
-select sqrt(avg(power(samal::numeric, 2.0))) as accuracy_name from matching_result_Camptocamp_and_bdtopo where type_of_matching_results = '1:1 validated'  and uri_ref in ('gouffre', 'aven', 'grotte', 'caverne', 'cirque', 'vallée', 'gorge', 'ravin', 'arête', 'crête', 'aiguille', 'pic', 'sommet', 'rocher', 'plaine', 'versant', 'ravin', 'col')
+select sqrt(avg(power(samal::numeric, 2.0))) as accuracy_name 
+from matching_result_Camptocamp_and_bdtopo 
+where type_of_matching_results = '1:1 validated'  
+  and uri_source in ('gouffre', 'aven', 'grotte', 'caverne', 'cirque', 'vallée', 'gorge', 'ravin', 'arête', 'crête', 'aiguille', 'pic', 'sommet', 'rocher', 'plaine', 'versant', 'ravin', 'col')
 
 
 -- it computes the agreement rate for all the sources :
