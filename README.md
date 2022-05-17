@@ -83,10 +83,13 @@ These instructions will be executed before the first or the second reproducing t
   the values of the second column correspond to the column and the values of 
   the third column correspond to the quantitative values of the cross table
 - Several couple of values, not in the diagonal, are correctly classified items:  
-	(hébergement_isolé, abri), (lieu-dit, col), (lieu-dit, croix), (lieu-dit, massif_boisé),
+	(lieu-dit, col), (lieu-dit, croix), (lieu-dit, massif_boisé),
 	(lieu-dit, rocher), (lieu-dit,  surface_neige_et_glace), (lieu-dit, vallée), (lieu-dit, abri), 
-	(lieu-dit, hébergement_isolé), (hébergement_isolé, grange), (hébergement_accessible, gîte), 
-	(hébergement_isolé', 'refuge'); 
+	(lieu-dit, hébergement_isolé), 
+	(hébergement_isolé, abri), (hébergement_accessible, gîte), 
+	(hébergement_isolé, refuge),  (gite, refuge), (abri, refuge), 
+	((vide), lac), 
+	(dépression_fermée, grotte)
   these pairs are used also to compute overall accuracy. 
 - The overall accuracy is the sum of items on the main diagonal + items correctly classified) 
   divided by the sum of all items from the matrix
