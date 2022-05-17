@@ -222,7 +222,7 @@ The main is into MainMetadataChoucas.java. You have to specify the source. -->
 - This is an example to create a boxplot with R software:
   ```sql
   x <- read.csv("/home/glagaffe/distsamal.csv",header=T, sep=",")
-  boxplot(x)
+  boxplot(x, xlab="Refuges.info", ylab="Samal distance", main="Boxplot of Samal distance for names in Refuges.info source")
   ```
 
 
