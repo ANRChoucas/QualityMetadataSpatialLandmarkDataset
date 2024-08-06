@@ -1,0 +1,55 @@
+{
+    "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
+    "type": "SoftwareSourceCode",
+    "author": [
+        {
+            "id": "https://orcid.org/0000-0002-0007-5972",
+            "type": "Person",
+            "affiliation": {
+                "type": "Organization",
+                "name": "LASTIG, Univ Gustave Eiffel, IGN-ENSG"
+            },
+            "email": "marie-dominique.van-damme@ensg.eu",
+            "familyName": "VAN DAMME",
+            "givenName": "Marie-Dominique"
+        },
+        {
+            "type": "schema:Role",
+            "schema:author": "https://orcid.org/0000-0002-0007-5972",
+            "schema:roleName": "Developer"
+        },
+        {
+            "id": "https://orcid.org/0000-0002-1101-1333",
+            "type": "Person",
+            "affiliation": {
+                "type": "Organization",
+                "name": "LASTIG, Univ Gustave Eiffel, IGN-ENSG"
+            },
+            "email": "ana-maria.raimond@ign.fr",
+            "familyName": "Olteanu-Raimond",
+            "givenName": "Ana-Maria"
+        },
+        {
+            "type": "schema:Role",
+            "schema:author": "https://orcid.org/0000-0002-1101-1333",
+            "schema:roleName": "Developer"
+        }
+    ],
+    "codeRepository": "https://github.com/ANRChoucas/QualityMetadataSpatialLandmarkDataset.git",
+    "dateCreated": "2022-01-01",
+    "dateModified": "2022-06-10",
+    "description": "This project contains the procedures to reproduce the results of the paper: Van Damme, M.-D. and Olteanu-Raimond, A.-M.: A method to produce metadata describing and assessing the quality of spatial landmark datasets in mountain area, AGILE GIScience Ser., 3, 17, https://doi.org/10.5194/agile-giss-3-17-2022, 2022",
+    "downloadUrl": "https://github.com/ANRChoucas/QualityMetadataSpatialLandmarkDataset/archive/refs/tags/v1.0.0.zip",
+    "license": "https://spdx.org/licenses/CC0-1.0",
+    "name": "QualityMetadataSpatialLandmarkDataset",
+    "operatingSystem": "All",
+    "programmingLanguage": [
+        "Java",
+        "SQL"
+    ],
+    "schema:releaseNotes": "First version, version for the reproducibility process",
+    "runtimePlatform": "JVM",
+    "softwareRequirements": "Postgres",
+    "version": "1.0.0",
+    "developmentStatus": "active"
+}
