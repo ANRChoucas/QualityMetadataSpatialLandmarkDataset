@@ -6,6 +6,9 @@ and assessing the quality of spatial landmark datasets in mountain area, M.-D. V
 <a target="_blank" href="https://doi.org/10.17605/OSF.IO/6S2GP"><img cofileid="779365" src="https://contentmanager.copernicus.org/779365/10/locale/ssl" width="150px"></a>
 
 
+[![SWH](https://archive.softwareheritage.org/badge/origin/https://github.com/ANRChoucas/QualityMetadataSpatialLandmarkDataset/)](https://archive.softwareheritage.org/browse/origin/?origin_url=https://github.com/ANRChoucas/QualityMetadataSpatialLandmarkDataset)
+[![SWH](https://archive.softwareheritage.org/badge/swh:1:dir:edaeea174f73d7a9c2b28d5629391205640fe6e9/)](https://archive.softwareheritage.org/swh:1:dir:edaeea174f73d7a9c2b28d5629391205640fe6e9;origin=https://github.com/ANRChoucas/QualityMetadataSpatialLandmarkDataset;visit=swh:1:snp:8438efe736a692df9849070ac660e840f5ff4c0c;anchor=swh:1:rev:8034a5f7622fbd6262b347ab564ce05bf1ef9ba6)
+
 
 <!-- Metadata describing and assessing the quality of spatial landmark datasets in mountain area. -->
 
