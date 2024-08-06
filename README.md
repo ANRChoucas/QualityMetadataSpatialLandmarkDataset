@@ -26,7 +26,7 @@ and assessing the quality of spatial landmark datasets in mountain area, M.-D. V
 
 # Development & Contributions
 * Institute: LASTIG, Univ Gustave Eiffel, ENSG, IGN
-* License: Cecill-C
+* License: CC0-1.0 license
 * Authors:
 	- Marie-Dominique Van Damme
 	- Ana-Maria Raimond
