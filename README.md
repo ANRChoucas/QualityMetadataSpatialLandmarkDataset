@@ -3,6 +3,10 @@
 This project contains the procedures to reproduce the results of the paper *A method to produce metadata describing 
 and assessing the quality of spatial landmark datasets in mountain area, M.-D. Van Damme, A.-M. Olteanu Raimond*
 
+<a target="_blank" href="https://doi.org/10.17605/OSF.IO/6S2GP"><img cofileid="779365" src="https://contentmanager.copernicus.org/779365/10/locale/ssl" width="150px"></a>
+
+
+
 <!-- Metadata describing and assessing the quality of spatial landmark datasets in mountain area. -->
 
 
